@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id = "btn">Stop</button>
+</body>
+
+<script>
+    const func = function(){
+        console.log("Yash Purwar")
+    }
+    setTimeout(func, 2000);
+
+    const changeText = function(){
+        document.querySelector("h1").innerHTML = "Best Javascript Series";
+    }
+
+    const changeMe = setTimeout(changeText, 2000);
+
+    document.querySelector('#btn').addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+    });
+</script>
+</html>
